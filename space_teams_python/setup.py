@@ -26,6 +26,8 @@ setup(
         'console_scripts': [
             'example_client = space_teams_python.example_client:main',
             'image_client = space_teams_python.image_client:main',
+            'rgbd_saver_exe = space_teams_python.image_saver:main',
+            'rgbd_visualizer_ui_exe = space_teams_python.RGBD_visualize_UI:main',
         ],
     },
 )
