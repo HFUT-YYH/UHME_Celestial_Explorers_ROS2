@@ -41,10 +41,24 @@ def generate_launch_description():
     #     name='your_node_name',
     #     output='screen'
     # )
+    image_saver_node = Node(
+        package='space_teams_python',
+        executable = 'rgbd_saver_exe',
+        name = 'rgb_saver',
+        output = 'screen',
 
+    )
+    rgbd_visualizer_node = Node(
+        package='space_teams_python',
+        executable = 'rgbd_visualizer_ui_exe',
+        name = 'rgb_visualizer',
+        output = 'screen',
+    )
     return LaunchDescription([
         port_arg,
         rosbridge_launch,
-        image_client_node # , (make sure to separate with comma if adding a node)
+        image_client_node, # , (make sure to separate with comma if adding a node)
+        image_saver_node,
+        rgbd_visualizer_node
         # another_node
     ])
