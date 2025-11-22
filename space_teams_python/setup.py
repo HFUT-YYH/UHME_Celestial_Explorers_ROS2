@@ -28,6 +28,12 @@ setup(
             'image_client = space_teams_python.image_client:main',
             'rgbd_saver_exe = space_teams_python.image_saver:main',
             'rgbd_visualizer_ui_exe = space_teams_python.RGBD_visualize_UI:main',
+            'DepthGrad_costmap_exe = space_teams_python.DepthToCostmap:main',
+            'ceauto_exe = space_teams_python.ceautonomy:main',
+            'ceauto80_exe = space_teams_python.ceauto_poly_80:main',
+            
+            'ceauto_logger = space_teams_python.ceauto_logger:main',
+            'Image_recorder_exe = space_teams_python.Image_recorder:main',
         ],
     },
 )
