@@ -29,7 +29,7 @@ class ImageSubscriber(Node):
         self._depth_topic_config = depth_topic or TopicConfig(name='camera/depth/image_raw')
         self.declare_parameter('save_dir', os.path.expanduser('~/rgbd_saves'))
         self.declare_parameter('depth_min', 1.0)
-        self.declare_parameter('depth_max', 30000.0)
+        self.declare_parameter('depth_max', 1000.0)
         self.save_dir = self.get_parameter('save_dir').value
         self.depth_min = float(self.get_parameter('depth_min').value)
         self.depth_max = float(self.get_parameter('depth_max').value)
