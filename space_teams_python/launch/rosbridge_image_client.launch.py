@@ -46,12 +46,19 @@ def generate_launch_description():
         executable = 'rgbd_saver_exe',
         name = 'rgb_saver',
         output = 'screen',
-
     )
-    rgbd_visualizer_node = Node(
-        package='space_teams_python',
+    RGBD_visualizer_node = Node(
+        package = 'space_teams_python',
         executable = 'rgbd_visualizer_ui_exe',
         name = 'rgb_visualizer',
+        output = 'screen',
+
+    )
+    
+    DepthGrad_node = Node(
+        package='space_teams_python',
+        executable = 'DepthGrad_costmap_exe',
+        name = 'DepthGrad_exe',
         output = 'screen',
     )
     return LaunchDescription([
@@ -59,6 +66,7 @@ def generate_launch_description():
         rosbridge_launch,
         image_client_node, # , (make sure to separate with comma if adding a node)
         image_saver_node,
-        rgbd_visualizer_node
+        #DepthGrad_node,
+        #RGBD_visualizer_node,
         # another_node
     ])
